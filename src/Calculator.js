@@ -17,7 +17,7 @@ function Calculator() {
         log = [];
         operations = [];
         setOperation(null);
-        setNumber('');
+        setNumber(false);
         break;
       case '/':  
       case '*':  
@@ -33,7 +33,7 @@ function Calculator() {
     }
     setOperation(log.toString().split(',').join(''));
     if (utils.isNumber(utils.getLastOperation())){
-      setNumber(eval(log.toString().split(',').join('')));
+      setNumber(Math.round(eval(log.toString().split(',').join(''))));
     }else{
       if(number){
         operations.push(e.target.id);

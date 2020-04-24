@@ -2,7 +2,7 @@
 body{
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
-  background-color: black;
+  background-color: #6C7786;
   color: lightblue;
 }
 #Calculator{
@@ -50,16 +50,14 @@ body{
 #clear:active{
   color: black;
 }
-/* 16px @ 480px increasing to 100px @ 1920px */
+
 @media (min-width: 480px) {
   :root {
-    font-size: calc(1rem + ((1vw - 4.8px) * 5.8333));
-    /* Where: * 5.8333 = 100 * font_Size_Difference / viewport_Width_Difference */
+    font-size: calc(1.875rem + ((1vw - 4.8px) * 1.1111));
   }
 }
-/* Prevent font scaling beyond this breakpoint */
 @media (min-width: 1920px) {
   :root {
-    font-size: 100px;
+    font-size: 46px;
   }
 }
