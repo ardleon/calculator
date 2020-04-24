@@ -1,0 +1,65 @@
+@import './variables.scss';
+body{
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: black;
+  color: lightblue;
+}
+#Calculator{
+  background-color: #990;
+  margin: 20px;
+}
+/* center buttons content */
+.CenterContent{
+  justify-content: center;
+  align-items: center;
+  line-height: 100%;
+  padding: 16px;
+  border: 1px solid #253446;
+}  
+#Display{
+  background-color: $display-bg-color;
+}
+  #Operations{
+    text-align: right;
+    font-size: 50%;
+  }
+  #Result{
+    text-align: right;
+  }
+
+.Operation{
+  background-color: $operation-bg-color;
+}
+.Number{
+  background-color: $number-bg-color;
+}
+
+.Operation:hover, .Number:hover{
+  background-color: lightblue;
+  color: white;
+}
+.Operation:active, .Number:active{
+  color: black;
+}
+
+#clear:hover{
+  background-color: $clear-bg-color-hover;
+  color: $clear-color-hover;
+}
+#clear:active{
+  color: black;
+}
+/* 16px @ 480px increasing to 100px @ 1920px */
+@media (min-width: 480px) {
+  :root {
+    font-size: calc(1rem + ((1vw - 4.8px) * 5.8333));
+    /* Where: * 5.8333 = 100 * font_Size_Difference / viewport_Width_Difference */
+  }
+}
+/* Prevent font scaling beyond this breakpoint */
+@media (min-width: 1920px) {
+  :root {
+    font-size: 100px;
+  }
+}

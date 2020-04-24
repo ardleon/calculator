@@ -1,0 +1,66 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html, body {
+  width: calc(100vw + 0px);
+  height: calc(100vh + 0px);
+  max-width: calc(100vw + 0px);
+  max-height: calc(100vh + 0px);
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  overflow: hidden;
+  cursor: default;
+  margin: 0px;
+  padding: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}
+body {
+  min-height: 100vh;
+  /*https://css-tricks.com/snippets/css/fluid-typography/*/
+  font-size: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.Container {
+  overflow: inherit;
+  display: inherit;
+}
+.VDirection{
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.HDirection{
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.ParentSize{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.XScroll{
+  overflow-x: auto;
+}
+.YScroll{
+  overflow-y: auto;
+}
+.ItemsFlowRowWrap{
+  flex-flow: row wrap;
+}
